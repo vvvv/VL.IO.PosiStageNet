@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="Mepk4M52keONvbVjpyo1Np" LanguageVersion="2025.7.0" Version="0.128">
+  <NugetDependency Id="Nr2bAJpdk4nPbkChmDyWQy" Location="VL.CoreLib" Version="2025.7.0" />
+  <Patch Id="KhMOcmp1vvGOhcLXSuEujN">
+    <Canvas Id="GDLHPnjAyUULArM66dd7yK" DefaultCategory="Main" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="Ov7CVLEWQbUN5Ci1nmt7Mm">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="RMLHHrfYl0FOdIrWADDrzq">
+        <Canvas Id="JngfIBzlxIrO4WvNcstZde" CanvasType="Group">
+          <Node Bounds="125,310,86,19" Id="JQEDifLiYp6NHs6g6al0zy">
+            <p:NodeReference LastCategoryFullName="VL.IO.PosiStageNet" LastDependency="VL.IO.PosiStageNet.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="PSNClient" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="JFVxiRYIgGyM6DPtBPwvmV" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="LYxA2y6xUnoMnRLDc9TQkH" Name="Multicast Ip" Kind="InputPin" />
+            <Pin Id="NKmVO1kUnjqOH3SI5K8xzE" Name="Port" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Mqo1cg9rfPtQI6ellk1D63" Name="Local Ip" Kind="InputPin" />
+            <Pin Id="GvyxgNNYw4FMpCxFbRMsIE" Name="Is Strict" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Mw2SCiRLwGXLLq3oAEgHrM" Name="Enabled" Kind="InputPin" />
+            <Pin Id="O7MkC835ughNTf4u7IRdAj" Name="State Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="MlPGxga0saRNnOx76qa4cK" Name="Output" Kind="OutputPin" />
+            <Pin Id="E7TZV4jxpA5O122mLgRyQm" Name="Remote System Name" Kind="OutputPin" />
+            <Pin Id="MJxfIVGHEqBPI9fsj2lc1F" Name="Is Listening" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="125,431,65,19" Id="CPy73hXYEOKNulBMWTIrPa">
+            <p:NodeReference LastCategoryFullName="Reactive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HoldLatest" />
+            </p:NodeReference>
+            <Pin Id="CBWRxJ92pH1OemrSfQZFwM" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="T6X8pgsfggDN9h8ZXcqU7j" Name="Initial Result" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UatOQcy0G6qMHBNVSXPvxK" Name="Async Notifications" Kind="InputPin" />
+            <Pin Id="OUKoE3S1BTOPC64HfgN2TE" Name="Output" Kind="OutputPin" IsHidden="true" />
+            <Pin Id="SJ433qRWXW1NbZkGU9IuUk" Name="Value" Kind="OutputPin" />
+            <Pin Id="TzcCCZzuLxfOZZFx7uq0ye" Name="On Data" Kind="OutputPin" />
+            <Pin Id="QEmTfUqdETgOot5mnBqvqb" Name="Reset" Kind="InputPin" />
+          </Node>
+          <Pad Id="Hx0EpS90ljNO9SNlS2dD3e" Comment="On Data" Bounds="187,480,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="GCRMytYQtPOMjcn4RwidlS" Comment="Is Listening" Bounds="208,360,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="NQACYEQ4jYoNCDRm1I5KPa" Comment="Remote System Name" Bounds="167,400,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="QqYNpTcvGjVL5Aiz1JuyI8" Comment="Enabled" Bounds="208,280,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="QVo6NQuKjcjLT6ywhJo6jz" Comment="Multicast Ip" Bounds="127,250,77,15" ShowValueBox="true" isIOBox="true" Value="236.10.10.10">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="GLGd6nQ3EwrM9yRzsMstnj" Bounds="359,449,213,179" ShowValueBox="true" isIOBox="true" Value="⚠️ The PosiStage client node holds a list of Trackers internally, which is never cleared!&#xD;&#xA;&#xD;&#xA;In order to remove outdated Trackers you'll have to come up with your own logic, e.g. by checking if the Timestamp is still updating. ">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="113,528,189,89" Id="FobzZu354HLL1j2YvO3UV7">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="QFGDEkIhVWtOACpZ4siYYW" Name="Break" Kind="OutputPin" />
+            <Patch Id="CP9mTZFb0eUM5vVupSxypg" ManuallySortedPins="true">
+              <Patch Id="MK6oztK2dLSMb4C8IVs4We" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="EcutvPAGgr1NiNYsOOstup" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="TD047ToYcwWLt0ddVBl25Z" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="125,560,165,19" Id="N2djzl30FshNWcLbLjwZqQ">
+                <p:NodeReference LastCategoryFullName="VL.IO.PosiStage.Tracker" LastDependency="VL.IO.PosiStage.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="4026531840" Name="Tracker" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Split" />
+                </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+                <Pin Id="UllJihujHCAN2Bb3pyyR2e" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QAPBFtT6u58NH0tEITN3Lg" Name="Tracker Id" Kind="OutputPin" />
+                <Pin Id="LT5bNl5tBEANrtUbVhP68C" Name="Tracker Name" Kind="OutputPin" />
+                <Pin Id="DBehFeVa7kiQQApjSOAukX" Name="Position" Kind="OutputPin" />
+                <Pin Id="MUQke1nnQgoPdo6fNG7bKE" Name="Speed" Kind="OutputPin" />
+                <Pin Id="NA88Arj5x3qM7R4RQ2ysxx" Name="Acceleration" Kind="OutputPin" />
+                <Pin Id="LC9Kq34AW03QZ7GkFgFMdF" Name="Orientation" Kind="OutputPin" />
+                <Pin Id="MtsAffM7zG8MrN0yOAtSyk" Name="Target Position" Kind="OutputPin" />
+                <Pin Id="TW4OEcFeB3ZOEQWcDS2Rs8" Name="Timestamp" Kind="OutputPin" />
+                <Pin Id="TjvwidPNLbsLpX6u2uTDDW" Name="Validity" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="TyMH6i4NPFBOG2lW5jajUc" Bounds="127,534" Name="" Alignment="Top" />
+            <ControlPoint Id="R1pKUJHZOCIOGlTPrH5fNw" Bounds="127,611" Alignment="Bottom" />
+            <ControlPoint Id="I8siT0wv0sCOldX9qCubvK" Bounds="187,611" Alignment="Bottom" />
+            <ControlPoint Id="RmvZI3vNzmYQMduINbBeQ0" Bounds="247,611" Alignment="Bottom" />
+          </Node>
+          <Pad Id="Ml8apXH25eGOjwT3bD7ZsA" Comment="" Bounds="127,651,35,49" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="IJZxaclskysQMcZVo77x9A" Comment="" Bounds="187,651,35,49" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="D0SnhvVU0QDLqnj4bxv0Ym" Comment="" Bounds="247,650,85,49" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="Pkdmg7e3v9DMkkgRdoeJgp" Name="Create" />
+        <Patch Id="AZzZbNUTOTzMM8pRVyn7QG" Name="Update" />
+        <ProcessDefinition Id="B7bkiz18NrUNKVdf3jiCMj">
+          <Fragment Id="PpDRR64DZILMujfCEamDEa" Patch="Pkdmg7e3v9DMkkgRdoeJgp" Enabled="true" />
+          <Fragment Id="OsZJZDxb0P3MWZpYZmvDOo" Patch="AZzZbNUTOTzMM8pRVyn7QG" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="P7ph6ai8mbjP38uG4z5Syh" Ids="TzcCCZzuLxfOZZFx7uq0ye,Hx0EpS90ljNO9SNlS2dD3e" />
+        <Link Id="LXegdBLpLvyNtpxV6QAqaA" Ids="MJxfIVGHEqBPI9fsj2lc1F,GCRMytYQtPOMjcn4RwidlS" />
+        <Link Id="ScSi8bCiiMvNFX4JzMooWK" Ids="E7TZV4jxpA5O122mLgRyQm,NQACYEQ4jYoNCDRm1I5KPa" />
+        <Link Id="Tql1xpdbTiiMttu9Q8mMao" Ids="QqYNpTcvGjVL5Aiz1JuyI8,Mw2SCiRLwGXLLq3oAEgHrM" />
+        <Link Id="Ajfh6DLpf9ALFdCBVKpKsM" Ids="QVo6NQuKjcjLT6ywhJo6jz,LYxA2y6xUnoMnRLDc9TQkH" />
+        <Link Id="LbdLto1trpMPJi5g9HImLg" Ids="MlPGxga0saRNnOx76qa4cK,UatOQcy0G6qMHBNVSXPvxK" />
+        <Link Id="J8zdzCVyCavQAZ5WZb96za" Ids="SJ433qRWXW1NbZkGU9IuUk,TyMH6i4NPFBOG2lW5jajUc" />
+        <Link Id="LDaj0oNSFB7M4cCP7dSN0y" Ids="TyMH6i4NPFBOG2lW5jajUc,UllJihujHCAN2Bb3pyyR2e" />
+        <Link Id="BpbEpH6dJlSO805696uj5c" Ids="QAPBFtT6u58NH0tEITN3Lg,R1pKUJHZOCIOGlTPrH5fNw" />
+        <Link Id="S0TQQuzYlITMARYAiNrhU3" Ids="R1pKUJHZOCIOGlTPrH5fNw,Ml8apXH25eGOjwT3bD7ZsA" />
+        <Link Id="M4nnx6TN86FLM3Yvx8B6XG" Ids="LT5bNl5tBEANrtUbVhP68C,I8siT0wv0sCOldX9qCubvK" />
+        <Link Id="OanqFO7NAKNMjmcwcY7CUd" Ids="I8siT0wv0sCOldX9qCubvK,IJZxaclskysQMcZVo77x9A" />
+        <Link Id="K1GfshOCULhQHC1zyOGopL" Ids="DBehFeVa7kiQQApjSOAukX,RmvZI3vNzmYQMduINbBeQ0" />
+        <Link Id="IpaayxGosQ5NiVT8UTcRDv" Ids="RmvZI3vNzmYQMduINbBeQ0,D0SnhvVU0QDLqnj4bxv0Ym" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="NyvaadgPLoLMYErx2l3oQ0" Location="VL.IO.PosiStageNet" Version="0.0.0" />
+</Document>

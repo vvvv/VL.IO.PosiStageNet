@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.IO.PosiStageNet</id>
+    <version>0.0.1-alpha</version>
+    <title>VL.IO.PosiStageNet</title>
+    <authors>vvvv</authors>
+    <projectUrl>http://vvvv.org</projectUrl>
+    <repository type="git" url="https://github.com/vvvv/VL.IO.PosiStageNet.git" />
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Set of nodes to send and receive PosiStageNet trackers.</description>
+    <tags>VL, lighting</tags>
+    <license type="expression">LGPL-3.0-only</license>
+	<dependencies>
+	  <dependency id="DBDesign.PosiStageDotNet" version="0.3.2" />
+    </dependencies>
+    <icon>icon\nugeticon.png</icon>
+    <readme>docs\README.md</readme>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" />
+    <file src="nugeticon.png" target="icon\" />
+    <file src="..\README.md" target="docs\" />
+  </files>
+</package>
