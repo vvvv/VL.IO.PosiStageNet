@@ -18,7 +18,7 @@
           <Node Bounds="166,550,87,26" Id="BBxgSlLdvxAPBZJSBN4TCU">
             <p:NodeReference LastCategoryFullName="VL.IO.PosiStage.PosiStage" LastDependency="VL.IO.PosiStage.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="UpdateTrackers" />
+              <Choice Kind="OperationCallFlag" Name="SetTrackers" />
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
             <Pin Id="Jz0T9XNWkLRL8qrWXXGZop" Name="Input" Kind="StateInputPin" />
@@ -35,7 +35,7 @@
             <Pin Id="LSVPSCA1SD1L03VkPMW7ka" Name="Result" Kind="OutputPin" />
             <Pin Id="PNMxLvxOdPsMt8wnd6UYEv" Name="Input 2" Kind="InputPin" />
           </Node>
-          <Node Bounds="166,400,65,19" Id="McBfHMu0jbqLLzmz6rB0fx">
+          <Node Bounds="166,250,61,19" Id="McBfHMu0jbqLLzmz6rB0fx">
             <p:NodeReference LastCategoryFullName="VL.IO.PosiStage" LastDependency="VL.IO.PosiStage.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="PSNServer" />
@@ -45,7 +45,7 @@
             <Pin Id="K2BGGi0FUKuPrnPhVuXlYX" Name="System Name" Kind="InputPin" />
             <Pin Id="FloorI3ZJwWMAhexVMqA82" Name="Multicast Ip" Kind="InputPin" />
             <Pin Id="Ijg9LXEkrAcQUQ3xXhinrv" Name="Port" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Oxz9F2fpHzpMjpqNVYxeXQ" Name="Local Ip" Kind="InputPin" />
+            <Pin Id="RYUjBE7O3glLOc0sUmTXHt" Name="Local Ip" Kind="InputPin" IsHidden="true" />
             <Pin Id="VoGs5aGZ6kSLpE058DPr6I" Name="Data Send Frequency" Kind="InputPin" IsHidden="true" />
             <Pin Id="DjUYWzAt88SOoBjPkAr7Tv" Name="Info Send Frequency" Kind="InputPin" IsHidden="true" />
             <Pin Id="KNFJhXuNkq7M0Uj6sRXMbA" Name="Enabled" Kind="InputPin" DefaultValue="True" />
@@ -86,7 +86,7 @@
             <Pin Id="ANdlmlgZFS5QJ1R0oabHou" Name="Timestamp" Kind="InputPin" />
             <Pin Id="Oq5HUO5abFoN5CSU1P6vq4" Name="Validity" Kind="InputPin" />
           </Node>
-          <Pad Id="OFFg8AFcOfiOPwMM8UYB4a" Comment="Enabled" Bounds="228,350,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="OFFg8AFcOfiOPwMM8UYB4a" Comment="Enabled" Bounds="224,200,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -94,15 +94,47 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="LwdbSyKyIu7MWoSDKvU0DA" Comment="System Name" Bounds="168,270,35,15" ShowValueBox="true" isIOBox="true" Value="vvvv">
+          <Pad Id="LwdbSyKyIu7MWoSDKvU0DA" Comment="System Name" Bounds="168,120,35,15" ShowValueBox="true" isIOBox="true" Value="vvvv">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="MaFluzIDM10Lrla4iPwYUH" Comment="Multicast Ip" Bounds="188,300,75,15" ShowValueBox="true" isIOBox="true" Value="236.10.10.10">
+          <Pad Id="MaFluzIDM10Lrla4iPwYUH" Comment="Multicast Ip" Bounds="196,150,75,15" ShowValueBox="true" isIOBox="true" Value="236.10.10.10">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="ApoqzVD4w5xP5tgsdQKbyU" Comment="Position" Bounds="290,351,35,43" ShowValueBox="true" isIOBox="true" Value="0.65, 0.25, 0.14">
+            <p:TypeAnnotation LastCategoryFullName="3D" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Vector3" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="VQqY5P6bmKYQduuGK8UMJx" Bounds="410,339,203,97" ShowValueBox="true" isIOBox="true" Value="- Positive x is right &#xD;&#xA;- Positive y is up&#xD;&#xA;- Positive z is depth&#xD;&#xA;&#xD;&#xA;Position is expressed in meters.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CPd1mGhmQo4PK452EzmzUN" Bounds="410,176,226,19" ShowValueBox="true" isIOBox="true" Value="For PosiStageNet protocol specs, see:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IAROb2YXcAILyWx2OxtNUh" Bounds="410,201,140,19" ShowValueBox="true" isIOBox="true" Value="https://posistage.net/wp-content/uploads/2019/01/PosiStageNetprotocol_v2.02_2016_09_15.pdf">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
           </Pad>
         </Canvas>
         <Patch Id="Pkdmg7e3v9DMkkgRdoeJgp" Name="Create" />
@@ -118,6 +150,7 @@
         <Link Id="QwehhgsNa45NY3TYueXg5g" Ids="LSVPSCA1SD1L03VkPMW7ka,AtOkD6PVtwzOX2pNzr97d1" />
         <Link Id="V1AMFz86Zx4PGktgzLt1oQ" Ids="CIN9tnEXIHONEUk6aq7UYn,FyXHefFvSxvMKRrYZXCFHI" />
         <Link Id="Nhyv7ibq2lZOYRWHhneJXK" Ids="MG2MS1uiEKeOPi93KFXKEH,PNMxLvxOdPsMt8wnd6UYEv" />
+        <Link Id="LJB0oTX5UfzOw9QeISRIHK" Ids="ApoqzVD4w5xP5tgsdQKbyU,CtyZ1d2cEnoLzGm5vg7xJE" />
       </Patch>
     </Node>
   </Patch>

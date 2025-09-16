@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="RMLHHrfYl0FOdIrWADDrzq">
         <Canvas Id="JngfIBzlxIrO4WvNcstZde" CanvasType="Group">
-          <Node Bounds="125,310,86,19" Id="JQEDifLiYp6NHs6g6al0zy">
+          <Node Bounds="125,265,86,19" Id="JQEDifLiYp6NHs6g6al0zy">
             <p:NodeReference LastCategoryFullName="VL.IO.PosiStageNet" LastDependency="VL.IO.PosiStageNet.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="PSNClient" />
@@ -24,7 +24,7 @@
             <Pin Id="JFVxiRYIgGyM6DPtBPwvmV" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="LYxA2y6xUnoMnRLDc9TQkH" Name="Multicast Ip" Kind="InputPin" />
             <Pin Id="NKmVO1kUnjqOH3SI5K8xzE" Name="Port" Kind="InputPin" IsHidden="true" />
-            <Pin Id="Mqo1cg9rfPtQI6ellk1D63" Name="Local Ip" Kind="InputPin" />
+            <Pin Id="TF1Tt5ZCWYCLuDexUgy6Eu" Name="Local Ip" Kind="InputPin" IsHidden="true" />
             <Pin Id="GvyxgNNYw4FMpCxFbRMsIE" Name="Is Strict" Kind="InputPin" IsHidden="true" />
             <Pin Id="Mw2SCiRLwGXLLq3oAEgHrM" Name="Enabled" Kind="InputPin" />
             <Pin Id="O7MkC835ughNTf4u7IRdAj" Name="State Output" Kind="OutputPin" IsHidden="true" />
@@ -46,9 +46,9 @@
             <Pin Id="QEmTfUqdETgOot5mnBqvqb" Name="Reset" Kind="InputPin" />
           </Node>
           <Pad Id="Hx0EpS90ljNO9SNlS2dD3e" Comment="On Data" Bounds="187,480,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="GCRMytYQtPOMjcn4RwidlS" Comment="Is Listening" Bounds="208,360,35,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="NQACYEQ4jYoNCDRm1I5KPa" Comment="Remote System Name" Bounds="167,400,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="QqYNpTcvGjVL5Aiz1JuyI8" Comment="Enabled" Bounds="208,280,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="GCRMytYQtPOMjcn4RwidlS" Comment="Is Listening" Bounds="208,315,35,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="NQACYEQ4jYoNCDRm1I5KPa" Comment="Remote System Name" Bounds="167,355,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="QqYNpTcvGjVL5Aiz1JuyI8" Comment="Enabled" Bounds="208,235,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -56,12 +56,12 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="QVo6NQuKjcjLT6ywhJo6jz" Comment="Multicast Ip" Bounds="127,250,77,15" ShowValueBox="true" isIOBox="true" Value="236.10.10.10">
+          <Pad Id="QVo6NQuKjcjLT6ywhJo6jz" Comment="Multicast Ip" Bounds="127,205,77,15" ShowValueBox="true" isIOBox="true" Value="236.10.10.10">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="GLGd6nQ3EwrM9yRzsMstnj" Bounds="359,449,213,179" ShowValueBox="true" isIOBox="true" Value="⚠️ The PosiStage client node holds a list of Trackers internally, which is never cleared!&#xD;&#xA;&#xD;&#xA;In order to remove outdated Trackers you'll have to come up with your own logic, e.g. by checking if the Timestamp is still updating. ">
+          <Pad Id="GLGd6nQ3EwrM9yRzsMstnj" Bounds="404,446,213,179" ShowValueBox="true" isIOBox="true" Value="⚠️ The PSNClient node holds a list of Trackers internally, which is never cleared!&#xD;&#xA;&#xD;&#xA;In order to remove outdated Trackers you'll have to come up with your own logic, e.g. by checking if the Timestamp is still updating. ">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
