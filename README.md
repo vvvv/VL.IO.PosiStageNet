@@ -1,6 +1,6 @@
-# VL.IO.PosistageNet
+# VL.IO.PosiStageNet
 
-Set of nodes to send and receive [PosiStageDotNet](https://posistage.net/) Trackers. 
+Set of nodes to send and receive [PosiStageNet](https://posistage.net/) Trackers. 
 
 For use with vvvv, the visual live-programming environment for .NET: http://vvvv.org
 
