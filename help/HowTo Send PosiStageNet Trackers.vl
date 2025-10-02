@@ -136,6 +136,15 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="Fy0omsiRs5tPLgoksLU1JA" Bounds="258,560,303,168" ShowValueBox="true" isIOBox="true" Value="&lt; Calling this operation sets the internal list of trackers which is then sent out periodically. &#xD;&#xA;&#xD;&#xA;Therefore it is not meant to be called multiple times per frame with different trackers, assuming they'll then all be sent. Instead, manage a list of trackers in your patch and then call this method once whenever you need to update the list of trackers to be sent.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="Pkdmg7e3v9DMkkgRdoeJgp" Name="Create" />
         <Patch Id="AZzZbNUTOTzMM8pRVyn7QG" Name="Update" />
